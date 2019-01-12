@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>Triangles</title>
+    </head>
+
+    <body>
+        <table border="1">
+            <tr>
+                <td>a =</td>
+                <td><input type="text" id="n1" /></td>
+            </tr>
+            <tr>
+                <td>b =</td>
+                <td><input type="text" id="n2" /></td>
+            </tr>
+            <tr>
+                <td>c =</td>
+                <td><input type="text" id="n3" /></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <button id="calc">Számolj!</button>
+                </td>
+            </tr>
+        </table>
+
+        <script>
+            var n1  = document.getElementById('n1'),
+                n2  = document.getElementById('n2'),
+                n3  = document.getElementById('n3'),
+                btn = document.getElementById('calc')
+
+            function readValues() {
+                var a = parseInt(n1.value),
+                    b = parseInt(n2.value),
+                    c = parseInt(n3.value)
+
+                if (isNaN(a) || isNaN(b) || isNaN(c)) {
+                    alert('Csak szám!')
+                }
+                else {
+                    // feladat: haromszog egyenlotlenseg
+                    if (a < 2) {
+                        alert('a kisebb mint ketto')
+                    }
+                    else if (b < 3) {
+                        alert('b kisebb mint harom')
+                    }
+                }
+            }
+
+            btn.addEventListener('click', readValues)
+        </script>
+    </body>
+</html>
