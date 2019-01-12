@@ -35,17 +35,11 @@
                     b = parseInt(n2.value),
                     c = parseInt(n3.value)
 
-                if (isNaN(a) || isNaN(b) || isNaN(c)) {
-                    alert('Csak szám!')
+                if (a + b <= c || a + c <= b || b + c <= a) {
+                  alert("False")
                 }
                 else {
-                    // feladat: haromszog egyenlotlenseg
-                    if (a < 2) {
-                        alert('a kisebb mint ketto')
-                    }
-                    else if (b < 3) {
-                        alert('b kisebb mint harom')
-                    }
+                  alert("True")
                 }
             }
 
