@@ -35,13 +35,17 @@
                     b = parseInt(n2.value),
                     c = parseInt(n3.value)
 
-                if (a + b <= c || a + c <= b || b + c <= a) {
-                  alert("False")
+                var kerdes = prompt('Valassz! kerulet vagy terulet szamitas?');
+                if (kerdes == "kerulet")
+                {
+                  alert(a + b + c);
                 }
-                else {
-                  alert("True")
+                else if (kerdes == "terulet")
+                {
+                  var s = (a + b + c) / 2
+                  alert(Math.sqrt(s * (s - a) * (s - b) * (s - c)))
                 }
-            }
+              }
 
             btn.addEventListener('click', readValues)
         </script>
